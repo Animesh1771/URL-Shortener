@@ -1,0 +1,10 @@
+package com.url_shortener.Repository;
+
+import com.url_shortener.Entity.Users;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface userRepository extends JpaRepository<Users, Long>  {
+    Optional<Users> findByEmail(String email);
+}
